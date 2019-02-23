@@ -50,6 +50,7 @@ describe("Assignment 1 - ShoppingCart", function() {
     cart.addItem("item 4", 0, 2)
     cart.addItem("item 5", 2, 0)
     assert.strictEqual(cart.total(), 41.5, "the total doesn't match")
+    console.log(cart.total());
     const cart2 = new ShoppingCart()
     assert.strictEqual(cart2.total(), 0, "the total of an empty cart should be 0")
   })
