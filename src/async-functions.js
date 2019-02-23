@@ -6,11 +6,16 @@ const giveItBackLater = (value, callback) => {
 
 
 const promiseToGiveItBackLater = (value) => {
-    return new Promise(function (resolve, reject) {
-        resolve(giveItBackLater(value, console.log(value)));
-    
-        reject(new Error("…")); // ignored
+    return new Promise((resolve, reject) => {
+        giveItBackLater(value, resolve);
       })
 }
 
+const addSomePromises = (somePromise) => {
+    return somePromise
+                .then(result => result.repeat(2))
+                .catch(result => result.repeat(3))
+}
 
+
+module.exports = { giveItBackLater, promiseToGiveItBackLater, addSomePromises }
