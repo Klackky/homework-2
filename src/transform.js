@@ -22,6 +22,6 @@ const groupAdultsByAgeRange = (people) => {
       }
       return userObj;
     },{})
-  }
+}
 
 module.exports.groupAdultsByAgeRange = groupAdultsByAgeRange;
